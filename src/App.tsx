@@ -1,20 +1,30 @@
-import { useState } from 'react'
-import Button from './components/Button'
-import Counter from './components/Counter'
-import Stopwatch from './components/Stopwatch'
+import Container from './components/Container'
+import Header from './components/Header'
+import { MuteProvider } from './context/MuteContext' // 🔥 Importando o MuteProvider
+import { ThemeProvider, useTheme } from './context/ThemeContext'
 
-const App = () => {
-  const [isStopwatch, setIsStopwatch] = useState(false)
+const AppContent = () => {
+  const { themeStyles } = useTheme()
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-zinc-900 text-white flex-col">
-      {isStopwatch ? <Stopwatch /> : <Counter />}
-      <Button
-        label={isStopwatch ? 'Modo Contador' : 'Modo Cronômetro'}
-        onClick={() => setIsStopwatch(!isStopwatch)}
-        variant="toggle"
-      />
+    <div
+      className={`min-h-screen flex flex-col items-center justify-center transition-all ${themeStyles.background} ${themeStyles.text}`}
+    >
+      <Header />
+      <Container />
     </div>
+  )
+}
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <MuteProvider>
+        {' '}
+        {/* 🔥 Agora a aplicação respeita o mute global */}
+        <AppContent />
+      </MuteProvider>
+    </ThemeProvider>
   )
 }
 
