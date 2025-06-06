@@ -14,15 +14,13 @@ const Button = ({ label, onClick, variant }: ButtonProps) => {
   const { isMuted } = useMute()
 
   const handleClick = () => {
-    playSound('/sounds/click.mp3', 0.2, isMuted) // 🔊 Agora o som do botão usa a função externa
+    playSound('/sounds/click.mp3', 0.2, isMuted)
     onClick()
   }
 
-  // Classes básicas do botão
   const baseStyle =
     'px-4 py-2 rounded-lg font-semibold transition-all focus:outline-none focus:ring-2'
 
-  // Definição de variantes, adaptadas ao tema
   const variants = {
     primary: `${themeStyles.buttonPrimary} hover:${themeStyles.buttonPrimaryHover} focus:ring-blue-300`,
     secondary: `${themeStyles.buttonSecondary} hover:${themeStyles.buttonSecondaryHover} focus:ring-red-300`,

@@ -9,8 +9,7 @@ const FullScreenLoader = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="w-80 h-48 bg-gray-700 rounded-lg animate-pulse" />{' '}
-      {/* 🔥 Agora mais alinhado aos componentes */}
+      <div className="w-80 h-48 bg-gray-700 rounded-lg animate-pulse" />
     </motion.div>
   )
 }

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaMoon, FaSun } from 'react-icons/fa' // 🔥 Adicionando os ícones
+import { FaMoon, FaSun } from 'react-icons/fa'
 import { useTheme } from '../context/ThemeContext'
 
 const Header = () => {
@@ -34,9 +34,9 @@ const Header = () => {
           transition={{ type: 'spring', stiffness: 300 }}
         >
           {theme === 'dark' ? (
-            <FaMoon className="text-gray-200 text-sm" /> // 🌙 Ícone para tema escuro
+            <FaMoon className="text-gray-200 text-sm" />
           ) : (
-            <FaSun className="text-yellow-500 text-sm" /> // 🌞 Ícone para tema claro
+            <FaSun className="text-yellow-500 text-sm" />
           )}
         </motion.div>
       </motion.button>

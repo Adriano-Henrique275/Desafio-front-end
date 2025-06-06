@@ -3,7 +3,7 @@ export const playSound = (
   volume: number = 0.2,
   isMuted: boolean,
 ) => {
-  if (isMuted) return // 🔥 Se estiver mutado, não toca o som
+  if (isMuted) return
 
   const audio = new Audio(soundFile)
   audio.volume = volume

@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 
-// Criamos um contexto para gerenciar o mute globalmente
 type MuteContextType = {
   isMuted: boolean
   setIsMuted: React.Dispatch<React.SetStateAction<boolean>>
@@ -18,11 +17,11 @@ export const useMute = () => {
 
 export const MuteProvider = ({ children }: { children: React.ReactNode }) => {
   const [isMuted, setIsMuted] = useState<boolean>(() => {
-    return localStorage.getItem('mute') === 'true' // Recupera estado salvo
+    return localStorage.getItem('mute') === 'true'
   })
 
   useEffect(() => {
-    localStorage.setItem('mute', isMuted.toString()) // Salva estado de mute
+    localStorage.setItem('mute', isMuted.toString())
   }, [isMuted])
 
   return (

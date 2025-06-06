@@ -3,12 +3,11 @@ import { useEffect, useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
 import Button from './Button'
 import Counter from './Counter'
-import FullScreenLoader from './FullScreenLoader' // 🔥 Importando o loader global
+import FullScreenLoader from './FullScreenLoader'
 import MuteToggle from './MuteToggle'
 import Stopwatch from './Stopwatch'
 
 const Container = () => {
-  // 🔄 Estado de loading global
   const [isLoading, setIsLoading] = useState(true)
   const [isStopwatch, setIsStopwatch] = useState<boolean>(() => {
     const savedMode = localStorage.getItem('mode')
@@ -18,7 +17,7 @@ const Container = () => {
   const { themeStyles } = useTheme()
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1500) // 🔥 Simulação de carregamento global
+    setTimeout(() => setIsLoading(false), 1500)
   }, [])
 
   const handleToggleMode = () => {
@@ -34,7 +33,7 @@ const Container = () => {
       className={`relative w-full max-w-md p-6 rounded-lg shadow-lg transition-all ${themeStyles.containerBg}`}
     >
       {isLoading ? (
-        <FullScreenLoader /> // 🔥 Tela de carregamento global
+        <FullScreenLoader />
       ) : (
         <>
           <div className="absolute top-4 right-4">

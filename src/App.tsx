@@ -1,6 +1,6 @@
 import Container from './components/Container'
 import Header from './components/Header'
-import { MuteProvider } from './context/MuteContext' // 🔥 Importando o MuteProvider
+import { MuteProvider } from './context/MuteContext'
 import { ThemeProvider, useTheme } from './context/ThemeContext'
 
 const AppContent = () => {
@@ -20,8 +20,6 @@ const App = () => {
   return (
     <ThemeProvider>
       <MuteProvider>
-        {' '}
-        {/* 🔥 Agora a aplicação respeita o mute global */}
         <AppContent />
       </MuteProvider>
     </ThemeProvider>

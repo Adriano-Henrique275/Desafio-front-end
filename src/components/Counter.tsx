@@ -15,7 +15,7 @@ const Counter = () => {
   }, [count])
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1000) // 🔥 Simulação de carregamento
+    setTimeout(() => setIsLoading(false), 1000)
   }, [])
 
   return (
