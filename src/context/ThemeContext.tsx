@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import { darkTheme, lightTheme } from '../theme/theme'
+import { getInitialTheme, updateTheme } from '../utils/themeUtils'
 
 type ThemeContextType = {
   theme: 'light' | 'dark'
@@ -10,15 +11,12 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>(() =>
-    localStorage.getItem('theme') === 'dark' ? 'dark' : 'light',
-  )
+  const [theme, setTheme] = useState<'light' | 'dark'>(getInitialTheme)
 
   const themeStyles = theme === 'dark' ? darkTheme : lightTheme
 
   useEffect(() => {
-    localStorage.setItem('theme', theme)
-    document.documentElement.classList.toggle('dark', theme === 'dark')
+    updateTheme(theme)
   }, [theme])
 
   const toggleTheme = () =>

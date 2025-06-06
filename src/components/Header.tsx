@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { FaMoon, FaSun } from 'react-icons/fa' // 🔥 Adicionando os ícones
 import { useTheme } from '../context/ThemeContext'
 
 const Header = () => {
@@ -26,12 +27,18 @@ const Header = () => {
         whileTap={{ scale: 0.9 }}
       >
         <motion.div
-          className={`w-6 h-6 rounded-full ${
+          className={`w-6 h-6 flex items-center justify-center rounded-full ${
             theme === 'dark' ? 'bg-gray-900' : 'bg-white'
           }`}
           animate={{ x: theme === 'dark' ? 28 : 0 }}
           transition={{ type: 'spring', stiffness: 300 }}
-        />
+        >
+          {theme === 'dark' ? (
+            <FaMoon className="text-gray-200 text-sm" /> // 🌙 Ícone para tema escuro
+          ) : (
+            <FaSun className="text-yellow-500 text-sm" /> // 🌞 Ícone para tema claro
+          )}
+        </motion.div>
       </motion.button>
     </header>
   )

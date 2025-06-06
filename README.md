@@ -22,10 +22,10 @@ Um projeto React.js que combina um contador e um cronômetro, desenvolvido com V
 
 Siga os passos abaixo para rodar o projeto localmente:
 1️⃣ Clone o repositório
-[Github]("https://github.com/seu-usuario/seu-repositorio.git")
+[Github]("https://github.com/Adriano-Henrique275/Desafio-front-end")
 
 2️⃣ Entre na pasta do projeto
-cd counter-stopwatch
+cd desafio-front-end
 
 3️⃣ Instale as dependências com Yarn
 yarn install
@@ -39,17 +39,6 @@ yarn dev
 - Clique em - para diminuir
 - Clique em Modo Cronômetro para alternar entre contador e cronômetro
 - No cronômetro, use Iniciar, Parar e Resetar conforme necessário
-
-🛠 Estrutura do Projeto
-📂 src
-┣ 📂 components
-┃ ┣ 📜 Button.tsx
-┃ ┣ 📜 Counter.tsx
-┃ ┣ 📜 Stopwatch.tsx
-┗ 📜 App.tsx
-┣ 📜 index.css
-┣ 📜 main.tsx
-┗ 📜 tailwind.config.js
 
 #### 📝 Melhorias Futuras
 
