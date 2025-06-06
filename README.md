@@ -1,4 +1,17 @@
-# 🕒 Counter & Stopwatch
+# Desafio front-end
+
+> Desenvolva em React um contador que aumenta a cada clique. Use sua criatividade e conhecimentos para acrescentar funcionalidades ou algo que entenda pertinente ao contador. Vamos avaliar não só o código, mas também a maneira como ele foi pensado e desenvolvido.
+
+- Extra 1: - Os números do contador ficam verdes nos algarismos pares.
+- Extra 2: - Faça o contador se tornar um cronômetro através de mais um botão para isso.
+
+## Observações
+
+- O cronômetro não precisa contar milissegundos. Segundos já está ótimo.
+- - Não há necessidade de mais um botão para a parada do cronômetro, pode ser o mesmo botão
+    de início do cronômetro.
+
+## 🕒 Counter & Stopwatch
 
 Um projeto React.js que combina um contador e um cronômetro, desenvolvido com Vite, Tailwind CSS e TypeScript para garantir performance, estilização eficiente e segurança no código.
 
@@ -39,13 +52,6 @@ yarn dev
 - Clique em - para diminuir
 - Clique em Modo Cronômetro para alternar entre contador e cronômetro
 - No cronômetro, use Iniciar, Parar e Resetar conforme necessário
-
-#### 📝 Melhorias Futuras
-
-📌 Adicionar animações suaves
-📌 Melhorar o feedback visual dos botões
-📌 Implementar tema dark/light
-📌 Exportar tempo do cronômetro
 
 #### 📄 Licença
 
